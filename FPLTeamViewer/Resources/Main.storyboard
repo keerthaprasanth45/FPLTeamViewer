@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="teamsVC">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Premier League-->
+        <scene sceneID="teamsScene">
+            <objects>
+                <viewController storyboardIdentifier="TeamsViewController" title="Premier League" useStoryboardIdentifierAsRestorationIdentifier="YES" id="teamsVC" customClass="TeamsViewController" customModule="FPLTeamViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="teamsView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="teamsStack">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teamsBanner" customClass="RefreshBannerView" customModule="FPLTeamViewer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="0.0"/>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="92" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="teamsTable">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
+                                        <color key="backgroundColor" name="Canvas"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="TeamCell" rowHeight="92" id="teamCell" customClass="TeamCell" customModule="FPLTeamViewer" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="92"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="teamCell" id="teamContent">
+                                                    <rect key="frame" x="0.0" y="0.0" width="322.66666666666669" height="92"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teamAccent">
+                                                            <rect key="frame" x="0.0" y="0.0" width="4" height="92"/>
+                                                            <color key="backgroundColor" name="PitchGreen"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="4" id="teamAccentW"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teamBadge">
+                                                            <rect key="frame" x="16" y="18" width="56" height="56"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ARS" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="teamBadgeLabel">
+                                                                    <rect key="frame" x="4" y="21" width="48" height="14.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                                    <color key="textColor" name="PitchGreen"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" name="PitchGreenMuted"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="56" id="teamBadgeH"/>
+                                                                <constraint firstItem="teamBadgeLabel" firstAttribute="leading" secondItem="teamBadge" secondAttribute="leading" constant="4" id="teamBadgeLabelL"/>
+                                                                <constraint firstAttribute="trailing" secondItem="teamBadgeLabel" secondAttribute="trailing" constant="4" id="teamBadgeLabelR"/>
+                                                                <constraint firstItem="teamBadgeLabel" firstAttribute="centerX" secondItem="teamBadge" secondAttribute="centerX" id="teamBadgeLabelX"/>
+                                                                <constraint firstItem="teamBadgeLabel" firstAttribute="centerY" secondItem="teamBadge" secondAttribute="centerY" id="teamBadgeLabelY"/>
+                                                                <constraint firstAttribute="width" constant="56" id="teamBadgeW"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="teamTextStack">
+                                                            <rect key="frame" x="84" y="25.000000000000004" width="60.333333333333343" height="42.333333333333343"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Arsenal" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="teamName">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="60.333333333333336" height="20.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" name="Ink"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="ARS" textAlignment="natural" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teamShort">
+                                                                    <rect key="frame" x="0.0" y="24.333333333333336" width="60.333333333333336" height="18"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                                    <color key="textColor" name="SecondaryInk"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teamCountPill">
+                                                            <rect key="frame" x="239.33333333333334" y="33" width="75.333333333333343" height="26.333333333333329"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="251" text="30 players" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teamCount">
+                                                                    <rect key="frame" x="8.0000000000000036" y="6.0000000000000009" width="59.333333333333343" height="14.333333333333336"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                                    <color key="textColor" name="PitchGreen"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" name="PitchGreenMuted"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="teamCount" secondAttribute="bottom" constant="6" id="teamCountB"/>
+                                                                <constraint firstItem="teamCount" firstAttribute="leading" secondItem="teamCountPill" secondAttribute="leading" constant="8" id="teamCountL"/>
+                                                                <constraint firstAttribute="trailing" secondItem="teamCount" secondAttribute="trailing" constant="8" id="teamCountR"/>
+                                                                <constraint firstItem="teamCount" firstAttribute="top" secondItem="teamCountPill" secondAttribute="top" constant="6" id="teamCountT"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="teamAccent" secondAttribute="bottom" id="teamAccentB"/>
+                                                        <constraint firstItem="teamAccent" firstAttribute="leading" secondItem="teamContent" secondAttribute="leading" id="teamAccentL"/>
+                                                        <constraint firstItem="teamAccent" firstAttribute="top" secondItem="teamContent" secondAttribute="top" id="teamAccentT"/>
+                                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="teamBadge" secondAttribute="bottom" constant="12" id="teamBadgeBot"/>
+                                                        <constraint firstItem="teamBadge" firstAttribute="leading" secondItem="teamAccent" secondAttribute="trailing" constant="12" id="teamBadgeL"/>
+                                                        <constraint firstItem="teamBadge" firstAttribute="top" relation="greaterThanOrEqual" secondItem="teamContent" secondAttribute="top" constant="12" id="teamBadgeTop"/>
+                                                        <constraint firstItem="teamBadge" firstAttribute="centerY" secondItem="teamContent" secondAttribute="centerY" id="teamBadgeY"/>
+                                                        <constraint firstItem="teamCountPill" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="teamTextStack" secondAttribute="trailing" constant="8" id="teamCountLead"/>
+                                                        <constraint firstAttribute="trailing" secondItem="teamCountPill" secondAttribute="trailing" constant="8" id="teamCountTrail"/>
+                                                        <constraint firstItem="teamCountPill" firstAttribute="centerY" secondItem="teamContent" secondAttribute="centerY" id="teamCountY"/>
+                                                        <constraint firstItem="teamTextStack" firstAttribute="leading" secondItem="teamBadge" secondAttribute="trailing" constant="12" id="teamTextL"/>
+                                                        <constraint firstItem="teamTextStack" firstAttribute="centerY" secondItem="teamContent" secondAttribute="centerY" id="teamTextY"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" name="Card"/>
+                                                <connections>
+                                                    <outlet property="accentView" destination="teamAccent" id="teamOutAccent"/>
+                                                    <outlet property="badgeLabel" destination="teamBadgeLabel" id="teamOutBadgeLabel"/>
+                                                    <outlet property="badgeView" destination="teamBadge" id="teamOutBadge"/>
+                                                    <outlet property="nameLabel" destination="teamName" id="teamOutName"/>
+                                                    <outlet property="playerCountContainer" destination="teamCountPill" id="teamOutCountPill"/>
+                                                    <outlet property="playerCountLabel" destination="teamCount" id="teamOutCount"/>
+                                                    <outlet property="shortNameLabel" destination="teamShort" id="teamOutShort"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="teamsVC" id="teamsDS"/>
+                                            <outlet property="delegate" destination="teamsVC" id="teamsDG"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="teamsStatus" customClass="StatusMessageView" customModule="FPLTeamViewer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="teamsSpinner">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" name="PitchGreen"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="teamsSafe"/>
+                        <color key="backgroundColor" name="Canvas"/>
+                        <constraints>
+                            <constraint firstItem="teamsSpinner" firstAttribute="centerX" secondItem="teamsView" secondAttribute="centerX" id="teamsSpinX"/>
+                            <constraint firstItem="teamsSpinner" firstAttribute="centerY" secondItem="teamsView" secondAttribute="centerY" id="teamsSpinY"/>
+                            <constraint firstItem="teamsSafe" firstAttribute="bottom" secondItem="teamsStack" secondAttribute="bottom" id="teamsStackB"/>
+                            <constraint firstItem="teamsStack" firstAttribute="leading" secondItem="teamsView" secondAttribute="leading" id="teamsStackL"/>
+                            <constraint firstAttribute="trailing" secondItem="teamsStack" secondAttribute="trailing" id="teamsStackR"/>
+                            <constraint firstItem="teamsStack" firstAttribute="top" secondItem="teamsSafe" secondAttribute="top" id="teamsStackT"/>
+                            <constraint firstItem="teamsSafe" firstAttribute="bottom" secondItem="teamsStatus" secondAttribute="bottom" id="teamsStatusB"/>
+                            <constraint firstItem="teamsStatus" firstAttribute="leading" secondItem="teamsView" secondAttribute="leading" id="teamsStatusL"/>
+                            <constraint firstAttribute="trailing" secondItem="teamsStatus" secondAttribute="trailing" id="teamsStatusR"/>
+                            <constraint firstItem="teamsStatus" firstAttribute="top" secondItem="teamsSafe" secondAttribute="top" id="teamsStatusT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="teamsBanner" id="teamsOutBanner"/>
+                        <outlet property="spinner" destination="teamsSpinner" id="teamsOutSpin"/>
+                        <outlet property="statusView" destination="teamsStatus" id="teamsOutStatus"/>
+                        <outlet property="tableView" destination="teamsTable" id="teamsOutTable"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="teamsFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="20"/>
+        </scene>
+        <!--Squad-->
+        <scene sceneID="squadScene">
+            <objects>
+                <viewController storyboardIdentifier="SquadViewController" title="Squad" useStoryboardIdentifierAsRestorationIdentifier="YES" id="squadVC" customClass="SquadViewController" customModule="FPLTeamViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="squadView">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="squadStack">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                                <subviews>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="squadBanner" customClass="RefreshBannerView" customModule="FPLTeamViewer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="0.0"/>
+                                    </view>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="96" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="squadTable">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
+                                        <color key="backgroundColor" name="Canvas"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" reuseIdentifier="PlayerCell" rowHeight="96" id="playerCell" customClass="PlayerCell" customModule="FPLTeamViewer" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="55.333332061767578" width="353" height="96"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="playerCell" id="playerContent">
+                                                    <rect key="frame" x="0.0" y="0.0" width="353" height="96"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="playerTextStack">
+                                                            <rect key="frame" x="16" y="16" width="249" height="64"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Bukayo Saka" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" translatesAutoresizingMaskIntoConstraints="NO" id="playerName">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="249" height="20.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                    <color key="textColor" name="Ink"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="playerMeta">
+                                                                    <rect key="frame" x="0.0" y="28.333333333333339" width="249" height="35.666666666666657"/>
+                                                                    <subviews>
+                                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="playerChip">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="88" height="35.666666666666664"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Midfielder" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="playerPosition">
+                                                                                    <rect key="frame" x="8" y="5.0000000000000018" width="72" height="25.666666666666671"/>
+                                                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" name="Midfielder"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="bottom" secondItem="playerPosition" secondAttribute="bottom" constant="5" id="chipB"/>
+                                                                                <constraint firstItem="playerPosition" firstAttribute="leading" secondItem="playerChip" secondAttribute="leading" constant="8" id="chipL"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="playerPosition" secondAttribute="trailing" constant="8" id="chipR"/>
+                                                                                <constraint firstItem="playerPosition" firstAttribute="top" secondItem="playerChip" secondAttribute="top" constant="5" id="chipT"/>
+                                                                            </constraints>
+                                                                        </view>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="£10.0m" textAlignment="natural" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="playerPrice">
+                                                                            <rect key="frame" x="96" y="9" width="153" height="18"/>
+                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                                                            <color key="textColor" name="SecondaryInk"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="playerPointsBox">
+                                                            <rect key="frame" x="281" y="18" width="56" height="60"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="playerPointsStack">
+                                                                    <rect key="frame" x="14.666666666666686" y="9.6666666666666679" width="27" height="40.666666666666657"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="80" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="playerPoints">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="27" height="26.333333333333332"/>
+                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                                                            <color key="textColor" name="Gold"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="pts" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="playerPtsCaption">
+                                                                            <rect key="frame" x="4.3333333333333144" y="26.333333333333332" width="18" height="14.333333333333332"/>
+                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                                                            <color key="textColor" name="SecondaryInk"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" name="PitchGreenMuted"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60" id="ptsH"/>
+                                                                <constraint firstAttribute="width" constant="56" id="ptsW"/>
+                                                                <constraint firstItem="playerPointsStack" firstAttribute="centerX" secondItem="playerPointsBox" secondAttribute="centerX" id="ptsX"/>
+                                                                <constraint firstItem="playerPointsStack" firstAttribute="centerY" secondItem="playerPointsBox" secondAttribute="centerY" id="ptsY"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="playerPointsBox" firstAttribute="leading" secondItem="playerTextStack" secondAttribute="trailing" constant="16" id="pPtsL"/>
+                                                        <constraint firstAttribute="trailing" secondItem="playerPointsBox" secondAttribute="trailing" constant="16" id="pPtsR"/>
+                                                        <constraint firstItem="playerPointsBox" firstAttribute="centerY" secondItem="playerContent" secondAttribute="centerY" id="pPtsY"/>
+                                                        <constraint firstAttribute="bottom" secondItem="playerTextStack" secondAttribute="bottom" constant="16" id="pTextB"/>
+                                                        <constraint firstItem="playerTextStack" firstAttribute="leading" secondItem="playerContent" secondAttribute="leading" constant="16" id="pTextL"/>
+                                                        <constraint firstItem="playerTextStack" firstAttribute="top" secondItem="playerContent" secondAttribute="top" constant="16" id="pTextT"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" name="Card"/>
+                                                <connections>
+                                                    <outlet property="nameLabel" destination="playerName" id="pOutName"/>
+                                                    <outlet property="pointsCaptionLabel" destination="playerPtsCaption" id="pOutCap"/>
+                                                    <outlet property="pointsContainer" destination="playerPointsBox" id="pOutBox"/>
+                                                    <outlet property="pointsLabel" destination="playerPoints" id="pOutPts"/>
+                                                    <outlet property="positionContainer" destination="playerChip" id="pOutChip"/>
+                                                    <outlet property="positionLabel" destination="playerPosition" id="pOutPos"/>
+                                                    <outlet property="priceLabel" destination="playerPrice" id="pOutPrice"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="squadVC" id="squadDS"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="squadStatus" customClass="StatusMessageView" customModule="FPLTeamViewer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="118" width="393" height="666"/>
+                            </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="squadSpinner">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" name="PitchGreen"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="squadSafe"/>
+                        <color key="backgroundColor" name="Canvas"/>
+                        <constraints>
+                            <constraint firstItem="squadSpinner" firstAttribute="centerX" secondItem="squadView" secondAttribute="centerX" id="squadSpinX"/>
+                            <constraint firstItem="squadSpinner" firstAttribute="centerY" secondItem="squadView" secondAttribute="centerY" id="squadSpinY"/>
+                            <constraint firstItem="squadSafe" firstAttribute="bottom" secondItem="squadStack" secondAttribute="bottom" id="squadStackB"/>
+                            <constraint firstItem="squadStack" firstAttribute="leading" secondItem="squadView" secondAttribute="leading" id="squadStackL"/>
+                            <constraint firstAttribute="trailing" secondItem="squadStack" secondAttribute="trailing" id="squadStackR"/>
+                            <constraint firstItem="squadStack" firstAttribute="top" secondItem="squadSafe" secondAttribute="top" id="squadStackT"/>
+                            <constraint firstItem="squadSafe" firstAttribute="bottom" secondItem="squadStatus" secondAttribute="bottom" id="squadStatusB"/>
+                            <constraint firstItem="squadStatus" firstAttribute="leading" secondItem="squadView" secondAttribute="leading" id="squadStatusL"/>
+                            <constraint firstAttribute="trailing" secondItem="squadStatus" secondAttribute="trailing" id="squadStatusR"/>
+                            <constraint firstItem="squadStatus" firstAttribute="top" secondItem="squadSafe" secondAttribute="top" id="squadStatusT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bannerView" destination="squadBanner" id="squadOutBanner"/>
+                        <outlet property="spinner" destination="squadSpinner" id="squadOutSpin"/>
+                        <outlet property="statusView" destination="squadStatus" id="squadOutStatus"/>
+                        <outlet property="tableView" destination="squadTable" id="squadOutTable"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="squadFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="868" y="20"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Canvas">
+            <color red="0.94499999284744263" green="0.96100002527236938" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Card">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Gold">
+            <color red="0.78799998760223389" green="0.59200000762939453" blue="0.16500000655651093" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Ink">
+            <color red="0.063000001013278961" green="0.13699999451637268" blue="0.10199999809265137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Midfielder">
+            <color red="0.41600000858306885" green="0.10599999874830246" blue="0.60399997234344482" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PitchGreen">
+            <color red="0.050999999046325684" green="0.45100000500679016" blue="0.2669999897480011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PitchGreenMuted">
+            <color red="0.89800000190734863" green="0.9570000171661377" blue="0.92900002002716064" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryInk">
+            <color red="0.35699999332427979" green="0.41999998688697815" blue="0.3880000114440918" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

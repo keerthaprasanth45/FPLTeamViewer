@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000000000000000000000004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000003 /* Assets.xcassets */; };
+		000000000000000000000006 /* bootstrap.json in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000005 /* bootstrap.json */; };
+		000000000000000000000008 /* AppComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000007 /* AppComposition.swift */; };
+		00000000000000000000000A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000009 /* AppDelegate.swift */; };
+		00000000000000000000000C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000B /* SceneDelegate.swift */; };
+		00000000000000000000000E /* ContentLoadState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000D /* ContentLoadState.swift */; };
+		000000000000000000000010 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000F /* PlayerCell.swift */; };
+		000000000000000000000012 /* SquadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000011 /* SquadViewController.swift */; };
+		000000000000000000000014 /* SquadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000013 /* SquadViewModel.swift */; };
+		000000000000000000000016 /* TeamCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000015 /* TeamCell.swift */; };
+		000000000000000000000018 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000017 /* TeamsViewController.swift */; };
+		00000000000000000000001A /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000019 /* TeamsViewModel.swift */; };
+		00000000000000000000001C /* DTOs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001B /* DTOs.swift */; };
+		00000000000000000000001E /* Domain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001D /* Domain.swift */; };
+		000000000000000000000020 /* FPLAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000001F /* FPLAPI.swift */; };
+		000000000000000000000022 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000021 /* HTTPClient.swift */; };
+		000000000000000000000024 /* BootstrapCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000023 /* BootstrapCache.swift */; };
+		000000000000000000000026 /* BootstrapMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000025 /* BootstrapMapper.swift */; };
+		000000000000000000000028 /* FPLRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000027 /* FPLRepository.swift */; };
+		00000000000000000000002A /* PlayerFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000029 /* PlayerFilter.swift */; };
+		00000000000000000000002C /* StatusViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000002B /* StatusViews.swift */; };
+		000000000000000000000062 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000061 /* AppTheme.swift */; };
+		000000000000000000000064 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000063 /* Main.storyboard */; };
+		00000000000000000000002E /* BootstrapCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000002D /* BootstrapCacheTests.swift */; };
+		000000000000000000000030 /* BootstrapDecodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000002F /* BootstrapDecodingTests.swift */; };
+		000000000000000000000032 /* BootstrapMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000031 /* BootstrapMapperTests.swift */; };
+		000000000000000000000034 /* FPLRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000033 /* FPLRepositoryTests.swift */; };
+		000000000000000000000036 /* PlayerFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000035 /* PlayerFilterTests.swift */; };
+		000000000000000000000038 /* TestSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000037 /* TestSupport.swift */; };
+		00000000000000000000003A /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000039 /* ViewModelTests.swift */; };
+		000000000000000000000066 /* AppThemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000000000000000000000065 /* AppThemeTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		000000000000000000000051 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 000000000000000000000053 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 000000000000000000000049;
+			remoteInfo = FPLTeamViewer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		000000000000000000000001 /* FPLTeamViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FPLTeamViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000002 /* FPLTeamViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FPLTeamViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		000000000000000000000003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		000000000000000000000060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		000000000000000000000005 /* bootstrap.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = bootstrap.json; sourceTree = "<group>"; };
+		000000000000000000000007 /* AppComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComposition.swift; sourceTree = "<group>"; };
+		000000000000000000000009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00000000000000000000000B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		00000000000000000000000D /* ContentLoadState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoadState.swift; sourceTree = "<group>"; };
+		00000000000000000000000F /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		000000000000000000000011 /* SquadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadViewController.swift; sourceTree = "<group>"; };
+		000000000000000000000013 /* SquadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquadViewModel.swift; sourceTree = "<group>"; };
+		000000000000000000000015 /* TeamCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCell.swift; sourceTree = "<group>"; };
+		000000000000000000000017 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		000000000000000000000019 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
+		00000000000000000000001B /* DTOs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOs.swift; sourceTree = "<group>"; };
+		00000000000000000000001D /* Domain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Domain.swift; sourceTree = "<group>"; };
+		00000000000000000000001F /* FPLAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPLAPI.swift; sourceTree = "<group>"; };
+		000000000000000000000021 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		000000000000000000000023 /* BootstrapCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapCache.swift; sourceTree = "<group>"; };
+		000000000000000000000025 /* BootstrapMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapMapper.swift; sourceTree = "<group>"; };
+		000000000000000000000027 /* FPLRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPLRepository.swift; sourceTree = "<group>"; };
+		000000000000000000000029 /* PlayerFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFilter.swift; sourceTree = "<group>"; };
+		00000000000000000000002B /* StatusViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusViews.swift; sourceTree = "<group>"; };
+		000000000000000000000061 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		000000000000000000000063 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		00000000000000000000002D /* BootstrapCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapCacheTests.swift; sourceTree = "<group>"; };
+		00000000000000000000002F /* BootstrapDecodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapDecodingTests.swift; sourceTree = "<group>"; };
+		000000000000000000000031 /* BootstrapMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BootstrapMapperTests.swift; sourceTree = "<group>"; };
+		000000000000000000000033 /* FPLRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPLRepositoryTests.swift; sourceTree = "<group>"; };
+		000000000000000000000035 /* PlayerFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFilterTests.swift; sourceTree = "<group>"; };
+		000000000000000000000037 /* TestSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSupport.swift; sourceTree = "<group>"; };
+		000000000000000000000039 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTests.swift; sourceTree = "<group>"; };
+		000000000000000000000065 /* AppThemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00000000000000000000004C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000004F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		000000000000000000000042 /* FPLTeamViewer */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000003B /* App */,
+				00000000000000000000003C /* Features */,
+				00000000000000000000003D /* Models */,
+				00000000000000000000003E /* Networking */,
+				00000000000000000000003F /* Resources */,
+				000000000000000000000040 /* Services */,
+				000000000000000000000041 /* UI */,
+			);
+			path = FPLTeamViewer;
+			sourceTree = "<group>";
+		};
+		00000000000000000000003B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000007 /* AppComposition.swift */,
+				000000000000000000000009 /* AppDelegate.swift */,
+				00000000000000000000000B /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		00000000000000000000003C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000043 /* Squad */,
+				000000000000000000000044 /* Teams */,
+				00000000000000000000000D /* ContentLoadState.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		00000000000000000000003D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000001B /* DTOs.swift */,
+				00000000000000000000001D /* Domain.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		00000000000000000000003E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000001F /* FPLAPI.swift */,
+				000000000000000000000021 /* HTTPClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		00000000000000000000003F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000003 /* Assets.xcassets */,
+				000000000000000000000060 /* Info.plist */,
+				000000000000000000000063 /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		000000000000000000000040 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000023 /* BootstrapCache.swift */,
+				000000000000000000000025 /* BootstrapMapper.swift */,
+				000000000000000000000027 /* FPLRepository.swift */,
+				000000000000000000000029 /* PlayerFilter.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		000000000000000000000041 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000061 /* AppTheme.swift */,
+				00000000000000000000002B /* StatusViews.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		000000000000000000000043 /* Squad */ = {
+			isa = PBXGroup;
+			children = (
+				00000000000000000000000F /* PlayerCell.swift */,
+				000000000000000000000011 /* SquadViewController.swift */,
+				000000000000000000000013 /* SquadViewModel.swift */,
+			);
+			path = Squad;
+			sourceTree = "<group>";
+		};
+		000000000000000000000044 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000015 /* TeamCell.swift */,
+				000000000000000000000017 /* TeamsViewController.swift */,
+				000000000000000000000019 /* TeamsViewModel.swift */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		000000000000000000000046 /* FPLTeamViewerTests */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000045 /* Fixtures */,
+				00000000000000000000002D /* BootstrapCacheTests.swift */,
+				00000000000000000000002F /* BootstrapDecodingTests.swift */,
+				000000000000000000000031 /* BootstrapMapperTests.swift */,
+				000000000000000000000033 /* FPLRepositoryTests.swift */,
+				000000000000000000000035 /* PlayerFilterTests.swift */,
+				000000000000000000000037 /* TestSupport.swift */,
+				000000000000000000000039 /* ViewModelTests.swift */,
+				000000000000000000000065 /* AppThemeTests.swift */,
+			);
+			path = FPLTeamViewerTests;
+			sourceTree = "<group>";
+		};
+		000000000000000000000045 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000005 /* bootstrap.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		000000000000000000000047 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000001 /* FPLTeamViewer.app */,
+				000000000000000000000002 /* FPLTeamViewerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		000000000000000000000048 = {
+			isa = PBXGroup;
+			children = (
+				000000000000000000000042 /* FPLTeamViewer */,
+				000000000000000000000046 /* FPLTeamViewerTests */,
+				000000000000000000000047 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		000000000000000000000049 /* FPLTeamViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00000000000000000000005A /* Build configuration list for PBXNativeTarget "FPLTeamViewer" */;
+			buildPhases = (
+				00000000000000000000004B /* Sources */,
+				00000000000000000000004C /* Frameworks */,
+				00000000000000000000004D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FPLTeamViewer;
+			productName = FPLTeamViewer;
+			productReference = 000000000000000000000001 /* FPLTeamViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		00000000000000000000004A /* FPLTeamViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00000000000000000000005B /* Build configuration list for PBXNativeTarget "FPLTeamViewerTests" */;
+			buildPhases = (
+				00000000000000000000004E /* Sources */,
+				00000000000000000000004F /* Frameworks */,
+				000000000000000000000050 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				000000000000000000000052 /* PBXTargetDependency */,
+			);
+			name = FPLTeamViewerTests;
+			productName = FPLTeamViewerTests;
+			productReference = 000000000000000000000002 /* FPLTeamViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		000000000000000000000053 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					000000000000000000000049 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					00000000000000000000004A = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 000000000000000000000049;
+					};
+				};
+			};
+			buildConfigurationList = 00000000000000000000005C /* Build configuration list for PBXProject "FPLTeamViewer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 000000000000000000000048;
+			productRefGroup = 000000000000000000000047 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				000000000000000000000049 /* FPLTeamViewer */,
+				00000000000000000000004A /* FPLTeamViewerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00000000000000000000004D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000004 /* Assets.xcassets in Resources */,
+				000000000000000000000064 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		000000000000000000000050 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000006 /* bootstrap.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00000000000000000000004B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				000000000000000000000008 /* AppComposition.swift in Sources */,
+				00000000000000000000000A /* AppDelegate.swift in Sources */,
+				00000000000000000000000C /* SceneDelegate.swift in Sources */,
+				00000000000000000000000E /* ContentLoadState.swift in Sources */,
+				000000000000000000000010 /* PlayerCell.swift in Sources */,
+				000000000000000000000012 /* SquadViewController.swift in Sources */,
+				000000000000000000000014 /* SquadViewModel.swift in Sources */,
+				000000000000000000000016 /* TeamCell.swift in Sources */,
+				000000000000000000000018 /* TeamsViewController.swift in Sources */,
+				00000000000000000000001A /* TeamsViewModel.swift in Sources */,
+				00000000000000000000001C /* DTOs.swift in Sources */,
+				00000000000000000000001E /* Domain.swift in Sources */,
+				000000000000000000000020 /* FPLAPI.swift in Sources */,
+				000000000000000000000022 /* HTTPClient.swift in Sources */,
+				000000000000000000000024 /* BootstrapCache.swift in Sources */,
+				000000000000000000000026 /* BootstrapMapper.swift in Sources */,
+				000000000000000000000028 /* FPLRepository.swift in Sources */,
+				00000000000000000000002A /* PlayerFilter.swift in Sources */,
+				00000000000000000000002C /* StatusViews.swift in Sources */,
+				000000000000000000000062 /* AppTheme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00000000000000000000004E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000000000000000000002E /* BootstrapCacheTests.swift in Sources */,
+				000000000000000000000030 /* BootstrapDecodingTests.swift in Sources */,
+				000000000000000000000032 /* BootstrapMapperTests.swift in Sources */,
+				000000000000000000000034 /* FPLRepositoryTests.swift in Sources */,
+				000000000000000000000036 /* PlayerFilterTests.swift in Sources */,
+				000000000000000000000038 /* TestSupport.swift in Sources */,
+				00000000000000000000003A /* ViewModelTests.swift in Sources */,
+				000000000000000000000066 /* AppThemeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		000000000000000000000052 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 000000000000000000000049 /* FPLTeamViewer */;
+			targetProxy = 000000000000000000000051 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		000000000000000000000058 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		000000000000000000000059 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		000000000000000000000054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FPLTeamViewer/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "FPL Teams";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seeclear.FPLTeamViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		000000000000000000000055 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FPLTeamViewer/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "FPL Teams";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seeclear.FPLTeamViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		000000000000000000000056 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seeclear.FPLTeamViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FPLTeamViewer.app/FPLTeamViewer";
+			};
+			name = Debug;
+		};
+		000000000000000000000057 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.seeclear.FPLTeamViewerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FPLTeamViewer.app/FPLTeamViewer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00000000000000000000005A /* Build configuration list for PBXNativeTarget "FPLTeamViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000054 /* Debug */,
+				000000000000000000000055 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00000000000000000000005B /* Build configuration list for PBXNativeTarget "FPLTeamViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000056 /* Debug */,
+				000000000000000000000057 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00000000000000000000005C /* Build configuration list for PBXProject "FPLTeamViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				000000000000000000000058 /* Debug */,
+				000000000000000000000059 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 000000000000000000000053 /* Project object */;
+}
