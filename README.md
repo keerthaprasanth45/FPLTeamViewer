@@ -35,13 +35,6 @@ A small MVVM layout with a composition root:
 
 Caching is file-based in Application Support so a later offline launch can still show the last successful bootstrap.
 
-## What I would improve with more time
-
-- Persist ETag/last-modified and avoid rewriting cache when the payload is unchanged.
-- Add a player detail screen (selected by, form, minutes).
-- Snapshot or UI tests for empty/error/search states.
-- Image badges using FPL shirt assets.
-
 ## Known limitations
 
 - There is no player detail screen.
